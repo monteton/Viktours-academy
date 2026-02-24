@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курс Турагента VIK TOURS - Обучение с нуля</title>
+    <title>Курс Турагента VIK TOURS — Обучение с нуля | Онлайн-профессия мечты</title>
+    <meta name="description"
+        content="Получите востребованную профессию онлайн-турагента и зарабатывайте от 70 000 до нескольких миллионов рублей в месяц. Обучение от основателя VIK TOURS Виктории Новиковой.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
@@ -14,21 +16,88 @@
 
 <body>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="navbar-logo">VIK TOURS</a>
+        <button class="navbar-burger" id="navBurger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-links" id="navLinks">
+            <li><a href="#about">О курсе</a></li>
+            <li><a href="#why">Преимущества</a></li>
+            <li><a href="#pricing">Тарифы</a></li>
+            <li><a href="#cases">Кейсы</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#pricing" class="navbar-cta">Записаться</a></li>
+        </ul>
+    </nav>
+
     <!-- Block 1: Hero -->
-    <header class="hero hero-bg">
+    <header class="hero hero-bg" id="hero">
+        <div class="particles" id="particles"></div>
         <div class="overlay"></div>
         <div class="container fade-in-up" style="position: relative; z-index: 1;">
-            <h1 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Получите востребованную профессию
-                онлайн-турагента</h1>
-            <p style="color: white; font-weight: 500; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">и зарабатывайте от 70 000
-                до нескольких миллионов рублей в месяц из любой точки мира удаленно</p>
-            <p class="section-subtitle" style="color: #f0f0f0;">Как поменять скучную профессию на яркую и солнечную?</p>
-            <a href="#pricing" class="btn btn-primary">Хочу на курс</a>
+            <div class="badge" style="margin-bottom: 1.5rem;">
+                <span>🔥</span> Набор открыт — места ограничены
+            </div>
+            <h1>Получите востребованную профессию<br>онлайн-турагента</h1>
+            <p style="font-weight: 500;">и зарабатывайте от 70 000 до нескольких миллионов рублей в месяц из любой точки
+                мира удаленно</p>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Как поменять скучную
+                профессию на яркую и солнечную?</p>
+            <a href="#pricing" class="btn btn-primary btn-pulse">Хочу на курс</a>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="15">0</span>
+                    <span class="stat-label">Лет опыта</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="5000">0</span>
+                    <span class="stat-label">Довольных туристов</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" data-count="25">0</span>
+                    <span class="stat-label">Стран</span>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>✈️ Турция</span>
+            <span>🏝️ Мальдивы</span>
+            <span>🌴 ОАЭ</span>
+            <span>🗺️ Египет</span>
+            <span>🎌 Таиланд</span>
+            <span>🏔️ Вьетнам</span>
+            <span>🌏 Индонезия</span>
+            <span>🇨🇳 Китай</span>
+            <span>🏖️ Сейшелы</span>
+            <span>🌊 Круизы</span>
+            <span>✈️ Турция</span>
+            <span>🏝️ Мальдивы</span>
+            <span>🌴 ОАЭ</span>
+            <span>🗺️ Египет</span>
+            <span>🎌 Таиланд</span>
+            <span>🏔️ Вьетнам</span>
+            <span>🌏 Индонезия</span>
+            <span>🇨🇳 Китай</span>
+            <span>🏖️ Сейшелы</span>
+            <span>🌊 Круизы</span>
+        </div>
+    </div>
+
     <!-- Block 2: About Course & Founder -->
-    <section class="section">
+    <section class="section" id="about">
+        <div class="deco-circle deco-circle-1"></div>
         <div class="container">
             <h2 class="section-title">Обучение с нуля от основателя и директора онлайн-турагентства VIK TOURS</h2>
             <p class="section-subtitle">Уникальный курс, который содержит в себе актуальную и объемную информацию в
@@ -38,14 +107,22 @@
             <div class="founder-section">
                 <div class="founder-image fade-in-up">
                     <img src="images/about.JPEG" alt="Виктория Новикова"
-                        style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: var(--shadow-lg);">
+                        style="width: 100%; max-width: 400px; border-radius: 20px;">
                 </div>
                 <div class="founder-content fade-in-up delay-100">
                     <h3>Виктория Новикова</h3>
-                    <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="margin-bottom: 1rem;">✅ Эксперт в области туризма с опытом работы более 15 лет</li>
-                        <li style="margin-bottom: 1rem;">✅ Предприниматель в сфере туризма с миллионными оборотами</li>
-                        <li style="margin-bottom: 1rem;">✅ С агентством VIK TOURS отдохнуло уже более 5 000 туристов
+                    <ul style="list-style: none; margin-top: 1.5rem;">
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <span style="color: var(--primary-green); font-size: 1.2rem; flex-shrink: 0;">✅</span>
+                            Эксперт в области туризма с опытом работы более 15 лет
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <span style="color: var(--primary-green); font-size: 1.2rem; flex-shrink: 0;">✅</span>
+                            Предприниматель в сфере туризма с миллионными оборотами
+                        </li>
+                        <li style="margin-bottom: 1.2rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <span style="color: var(--primary-green); font-size: 1.2rem; flex-shrink: 0;">✅</span>
+                            С агентством VIK TOURS отдохнуло уже более 5 000 туристов
                         </li>
                     </ul>
                 </div>
@@ -54,28 +131,32 @@
     </section>
 
     <!-- Block 3: Why Dream Job -->
-    <section class="section bg-image-2" style="position: relative;">
+    <section class="section bg-image-2 section-dark-overlay" style="position: relative;" id="why">
         <div class="overlay"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Почему
                 онлайн-турагент — это профессия мечты?</h2>
             <div class="grid-2">
-                <div class="card fade-in-up">
-                    <h4>🌍 Работа из любой точки мира</h4>
+                <div class="card card-glass icon-feature fade-in-up">
+                    <span class="feature-icon">🌍</span>
+                    <h4>Работа из любой точки мира</h4>
                     <p>Вам нужен только интернет и ноутбук. Ваш офис может быть на берегу океана или в уютной кофейне.
                     </p>
                 </div>
-                <div class="card fade-in-up delay-100">
-                    <h4>🚀 Минимальный старт</h4>
+                <div class="card card-glass icon-feature fade-in-up delay-100">
+                    <span class="feature-icon">🚀</span>
+                    <h4>Минимальный старт</h4>
                     <p>Не нужно закупать товар или снимать помещение. Вложения минимальны по сравнению с другим
                         бизнесом.</p>
                 </div>
-                <div class="card fade-in-up delay-200">
-                    <h4>✈️ Путешествия со скидками</h4>
+                <div class="card card-glass icon-feature fade-in-up delay-200">
+                    <span class="feature-icon">✈️</span>
+                    <h4>Путешествия со скидками</h4>
                     <p>Агенты первыми узнают о лучших ценах и летают в рекламные туры по себестоимости.</p>
                 </div>
-                <div class="card fade-in-up delay-300">
-                    <h4>💰 Нет потолка в доходах</h4>
+                <div class="card card-glass icon-feature fade-in-up delay-300">
+                    <span class="feature-icon">💰</span>
+                    <h4>Нет потолка в доходах</h4>
                     <p>Вы сами решаете, сколько зарабатывать — от приятной подработки до построения крупной сети
                         агентств.</p>
                 </div>
@@ -85,6 +166,7 @@
 
     <!-- Block 4: Why Choose Us -->
     <section class="section">
+        <div class="deco-circle deco-circle-2"></div>
         <div class="container">
             <h2 class="section-title">Почему обучение у Виктории Новиковой считается одним из лучших?</h2>
             <div class="grid-2">
@@ -92,17 +174,16 @@
                     <p style="margin-bottom: 1rem;"><strong>Обучение ведет практикующий турагент с огромным опытом
                             работы</strong>, прошедшая не раз через все кризисы в туристическом бизнесе и успешно
                         преодолевшая их.</p>
-                    <p style="margin-bottom: 1rem;">“Вся информация на моем курсе отвечает современным реалиям в мире
+                    <p style="margin-bottom: 1rem;">"Вся информация на моем курсе отвечает современным реалиям в мире
                         турбизнеса, я постоянно путешествую, повышаю свою квалификацию и получаю новые, передовые
                         знания, посетила уже 25 стран.</p>
                 </div>
                 <div class="fade-in-up delay-100">
                     <p style="margin-bottom: 1rem;">Я собрала весь свой опыт, ошибки, подводные камни, наработки, в свою
                         авторскую программу, чтобы Вы могли стартовать быстрее и увереннее.</p>
-                    <div
-                        style="background-color: var(--header-bg-light-blue); padding: 1.5rem; border-radius: 1rem; margin-top: 1rem;">
-                        <strong>Моя миссия</strong> - помогать осваивать новую востребованную профессию всем желающим и
-                        достойно зарабатывать на любимом деле “
+                    <div class="mission-card">
+                        <strong>Моя миссия</strong> — помогать осваивать новую востребованную профессию всем желающим и
+                        достойно зарабатывать на любимом деле "
                     </div>
                 </div>
             </div>
@@ -113,57 +194,67 @@
     </section>
 
     <!-- Block 5: Is this for you? -->
-    <section class="section bg-image-3" style="position: relative;">
+    <section class="section bg-image-3 section-dark-overlay" style="position: relative;">
         <div class="overlay"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Именно Вам подходит
                 этот курс, если:</h2>
             <div class="grid-3">
-                <div class="card fade-in-up">А) Вы обожаете путешествовать и хотели бы превратить это в стабильный
+                <div class="card card-glass fade-in-up">Вы обожаете путешествовать и хотели бы превратить это в
+                    стабильный
                     заработок</div>
-                <div class="card fade-in-up delay-100">Б) Вы выгорели на своей старой работе и хотели бы сменить
+                <div class="card card-glass fade-in-up delay-100">Вы выгорели на своей старой работе и хотели бы
+                    сменить
                     деятельность</div>
-                <div class="card fade-in-up delay-200">В) У вас амбициозные цели и Вы хотите открыть свое турагентство и
+                <div class="card card-glass fade-in-up delay-200">У вас амбициозные цели и Вы хотите открыть свое
+                    турагентство и
                     зарабатывать от 500 000 рублей в месяц и больше</div>
-                <div class="card fade-in-up">Г) Или Вы хотели бы иметь дополнительный доход от 70 000 рублей для себя,
+                <div class="card card-glass fade-in-up">Вы хотели бы иметь дополнительный доход от 70 000 рублей
+                    для себя,
                     используя только интернет и ноутбук</div>
-                <div class="card fade-in-up delay-100">Д) Вы часто путешествуете и хотели бы делать это со скидками
+                <div class="card card-glass fade-in-up delay-100">Вы часто путешествуете и хотели бы делать это со
+                    скидками
                 </div>
-                <div class="card fade-in-up delay-200">Е) Не знаете с чего начать туристический бизнес</div>
-                <div class="card fade-in-up">Ж) Хотите работать удаленно</div>
-                <div class="card fade-in-up delay-100">З) Хотите узнать нюансы работы турагентом, посмотреть работу
+                <div class="card card-glass fade-in-up delay-200">Не знаете с чего начать туристический бизнес</div>
+                <div class="card card-glass fade-in-up">Хотите работать удаленно</div>
+                <div class="card card-glass fade-in-up delay-100">Хотите узнать нюансы работы турагентом, посмотреть
+                    работу
                     изнутри, получить практику</div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#pricing" class="btn btn-primary">Оставить заявку</a>
+                <a href="#pricing" class="btn btn-primary btn-pulse">Оставить заявку</a>
             </div>
         </div>
     </section>
 
     <!-- Block 6: Why Profitable -->
-    <section class="section bg-image-4" style="position: relative;">
+    <section class="section bg-image-4 section-dark-overlay" style="position: relative;">
         <div class="overlay"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Почему выгодно
                 обучаться именно у меня:</h2>
             <div class="grid-2">
-                <div class="card fade-in-up">
-                    <h4>А) Без воды</h4>
+                <div class="card card-glass icon-feature fade-in-up">
+                    <span class="feature-icon">📖</span>
+                    <h4>Без воды</h4>
                     <p>Актуальная и честная информация без воды. Я не обещаю миллионных заработков в первый месяц, но я
                         дам абсолютно все рабочие инструменты для достижения этих целей</p>
                 </div>
-                <div class="card fade-in-up delay-100">
-                    <h4>Б) Много практики</h4>
+                <div class="card card-glass icon-feature fade-in-up delay-100">
+                    <span class="feature-icon">🎯</span>
+                    <h4>Много практики</h4>
                     <p>На моем курсе много практики, а не только сухая теория. Таким образом после окончания курса, вы
                         без страха сможете работать с реальными туристами.</p>
                 </div>
-                <div class="card fade-in-up delay-200">
-                    <h4>В) Карьерный рост</h4>
+                <div class="card card-glass icon-feature fade-in-up delay-200">
+                    <span class="feature-icon">📈</span>
+                    <h4>Карьерный рост</h4>
                     <p>Мое агентство постоянно растет и лучшие ученики смогут пойти ко мне в команду и стать
                         менеджерами, старшими менеджерами или руководителем продаж</p>
                 </div>
-                <div class="card fade-in-up delay-300">
-                    <h4>Г) Бонусы</h4>
+                <div class="card card-glass icon-feature fade-in-up delay-300">
+                    <span class="feature-icon">🎁</span>
+                    <h4>Бонусы</h4>
                     <p>Бонусные уроки и подарки, которые Вас приятно порадуют</p>
                 </div>
             </div>
@@ -177,6 +268,7 @@
     <section id="pricing" class="section" style="background-color: var(--white);">
         <div class="container">
             <h2 class="section-title">Тарифы обучения</h2>
+            <p class="section-subtitle">Выберите подходящий тариф и начните свой путь в мир туризма</p>
             <div class="grid-3">
                 <!-- Tariff 1 -->
                 <div class="card pricing-card fade-in-up">
@@ -205,6 +297,15 @@
                             бронировать туры для себя и близких, с вознаграждением от туроператора, зарабатывая на
                             комиссии.</li>
                     </ul>
+
+                    <!-- NEW: Marketing Block for Tariff 1 -->
+                    <div class="pricing-new-block">
+                        <h5>📱 Маркетинг и поиск первых туристов <span class="new-tag">NEW</span></h5>
+                        <p>Упаковка соцсетей турагента (Instagram, Telegram, ВКонтакте). Как привлекать клиентов без
+                            бюджета. Скрипты ответов на запросы «А сколько стоит?» и «Я подумаю». Как работать с теплой
+                            базой (друзья, родственники) так, чтобы они покупали, а не просили скидку.</p>
+                    </div>
+
                     <div style="text-align: center; margin-top: auto; margin-bottom: 1rem;">
                         <p class="old-price">55 000 ₽</p>
                         <p class="price" style="font-size: 1.8rem;">29 000 ₽ <br><span
@@ -215,7 +316,7 @@
                 </div>
 
                 <!-- Tariff 2 -->
-                <div class="card pricing-card fade-in-up delay-100" style="border: 2px solid var(--primary-green);">
+                <div class="card pricing-card pricing-popular fade-in-up delay-100">
                     <div class="pricing-header">
                         <h3>Тариф 2. Профессиональный</h3>
                         <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">( для тех кто
@@ -233,11 +334,28 @@
                             собственное агентство или сеть агентств и зарабатывать от 500 000 рублей до миллионных
                             оборотов</li>
                     </ul>
+
+                    <!-- NEW: Marketing Block for Tariff 2 -->
+                    <div class="pricing-new-block">
+                        <h5>📱 Маркетинг и поиск первых туристов <span class="new-tag">NEW</span></h5>
+                        <p>Упаковка соцсетей турагента (Instagram, Telegram, ВКонтакте). Как привлекать клиентов без
+                            бюджета. Скрипты ответов на запросы «А сколько стоит?» и «Я подумаю». Как работать с теплой
+                            базой (друзья, родственники) так, чтобы они покупали, а не просили скидку.</p>
+                    </div>
+
+                    <!-- NEW: VIP Block for Tariff 2 -->
+                    <div class="pricing-new-block">
+                        <h5>👑 VIP-туризм и сложные продукты <span class="new-tag">NEW</span></h5>
+                        <p>Как работать с премиум-сегментом. Доступ к закрытым консьерж-сервисам. Особенности
+                            бронирования частных джетов и вилл.</p>
+                    </div>
+
                     <div style="text-align: center; margin-top: auto; margin-bottom: 1rem;">
                         <p class="old-price">75 000 ₽</p>
                         <p class="price">49 000 ₽</p>
                     </div>
-                    <button class="btn btn-primary" onclick="alert('Заявка на Тариф 2')">Хочу этот тариф</button>
+                    <button class="btn btn-primary btn-pulse" onclick="alert('Заявка на Тариф 2')">Хочу этот
+                        тариф</button>
                 </div>
 
                 <!-- Tariff 3 -->
@@ -262,18 +380,23 @@
             </div>
     </section>
 
-    <!-- Block 10: Bonuses -->
+    <!-- Block 10: Bonuses (Enhanced) -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Бонусы</h2>
-            <div class="card fade-in-up" style="margin-bottom: 2rem;">
-                <h3>🎁 БОНУСНЫЙ УРОК ПРИ 100% оплате сразу на старте продаж:</h3>
+            <h2 class="section-title">Секретные бонусы от Топ-преподавателя</h2>
+            <p class="section-subtitle">Эксклюзивные материалы и связи, которые нельзя просто нагуглить</p>
+
+            <div class="bonus-card fade-in-up">
+                <span class="bonus-icon">🎁</span>
+                <h3>БОНУСНЫЙ УРОК ПРИ 100% оплате сразу на старте продаж:</h3>
                 <p><strong>Урок "Техника продаж":</strong> Этапы продаж, выявление потребностей туриста, работа с
                     возражениями, работа с негативом. Как закрывать туристов на сделку.</p>
             </div>
-            <div class="card fade-in-up delay-100">
-                <h3>🎁 ПОДАРОЧНЫЕ ТЕМЫ ВСЕМ УЧАСТНИКАМ, СДЕЛАВШИМ ПРЕДОПЛАТУ:</h3>
-                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+
+            <div class="bonus-card fade-in-up delay-100">
+                <span class="bonus-icon">🎁</span>
+                <h3>ПОДАРОЧНЫЕ ТЕМЫ ВСЕМ УЧАСТНИКАМ, СДЕЛАВШИМ ПРЕДОПЛАТУ:</h3>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem; color: var(--text-secondary);">
                     <li>Как продавать, если не был в этой стране</li>
                     <li>Где брать контент для соц.сетей, как правильно отправлять предложения туристам</li>
                     <li>Все о рекламных турах, онлайн-рекламниках, бонусах для агентов, семинарах, бизнес-завтраков,
@@ -281,8 +404,32 @@
                     <li>Как продавать на большие чеки и не бояться. Бонусный эфир по психологии продаж.</li>
                 </ul>
             </div>
+
+            <!-- NEW: Enhanced Exclusive Bonuses -->
+            <div class="bonus-card fade-in-up delay-200">
+                <span class="bonus-icon">🔐</span>
+                <h3>Моя личная база проверенных DMC</h3>
+                <p>Личная база проверенных DMC (принимающих компаний) и контакты топ-менеджеров отелей в ОАЭ, Турции и
+                    на Мальдивах — для решения сложных вопросов туристов напрямую.</p>
+            </div>
+
+            <div class="bonus-card fade-in-up delay-300">
+                <span class="bonus-icon">✈️</span>
+                <h3>Гайд: Как попадать в закрытые FAM-trips</h3>
+                <p>Как легально попадать в закрытые рекламные туры (FAM-trips) бесплатно или за копейки, даже если у вас
+                    пока мало бронирований.</p>
+            </div>
+
+            <div class="bonus-card fade-in-up delay-400">
+                <span class="bonus-icon">⚖️</span>
+                <h3>«Юридическая аптечка турагента»</h3>
+                <p>Шаблоны ответов на претензии туристов (задержка рейса, овербукинг, клопы в номере) — готовые
+                    формулировки, которые защитят вашу репутацию.</p>
+            </div>
+
             <div style="text-align: center; margin-top: 3rem;">
-                <button class="btn btn-primary" onclick="alert('Оставить предоплату')">Оставить предоплату - 3 000
+                <button class="btn btn-primary btn-pulse" onclick="alert('Оставить предоплату')">Оставить предоплату — 3
+                    000
                     рублей</button>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">НА СТАРТЕ ПРОДАЖ ВЫ
                     СМОЖЕТЕ ДОПЛАТИТЬ ЛЮБОЙ ТАРИФ И ГАРАНТИРОВАННО ЗАНЯТЬ МЕСТО ПО САМОЙ ВЫГОДНОЙ ЦЕНЕ</p>
@@ -294,6 +441,24 @@
     <section class="section" style="background-color: var(--white);">
         <div class="container">
             <h2 class="section-title">Какой результат вы получите:</h2>
+            <div class="counter-grid" style="margin-bottom: 3rem;">
+                <div class="counter-item fade-in-up">
+                    <span class="counter-number" data-count="70000">0</span>
+                    <span class="counter-label">₽ минимальный доход</span>
+                </div>
+                <div class="counter-item fade-in-up delay-100">
+                    <span class="counter-number" data-count="6">0</span>
+                    <span class="counter-label">недель обучения</span>
+                </div>
+                <div class="counter-item fade-in-up delay-200">
+                    <span class="counter-number" data-count="25">0</span>
+                    <span class="counter-label">направлений</span>
+                </div>
+                <div class="counter-item fade-in-up delay-300">
+                    <span class="counter-number" data-count="100">0</span>
+                    <span class="counter-label">% практика</span>
+                </div>
+            </div>
             <div class="grid-3">
                 <div class="card fade-in-up">Научитесь подбирать туры на профессиональном уровне и освоите все тонкости
                     бронирования</div>
@@ -310,41 +475,121 @@
         </div>
     </section>
 
-    <!-- Block 11: How it works -->
+    <!-- Block 11: How it works — TIMELINE -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">КАК ПРОХОДИТ ОБУЧЕНИЕ:</h2>
-            <div class="grid-2">
-                <div class="card fade-in-up">
-                    <p>Доступ к видеоурокам в удобном мобильном приложении на базе телеграмм</p>
+            <div class="timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content">
+                        <p>Доступ к видеоурокам в удобном мобильном приложении на базе телеграмм</p>
+                    </div>
                 </div>
-                <div class="card fade-in-up delay-100">
-                    <p>Общая встреча онлайн с Викторией с ответами на вопросы</p>
+                <div class="timeline-item fade-in-up delay-100">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <p>Общая встреча онлайн с Викторией с ответами на вопросы</p>
+                    </div>
                 </div>
-                <div class="card fade-in-up delay-200">
-                    <p>Общий чат с сокурсниками и Викторией</p>
+                <div class="timeline-item fade-in-up delay-200">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content">
+                        <p>Общий чат с сокурсниками и Викторией</p>
+                    </div>
                 </div>
-                <div class="card fade-in-up delay-300">
-                    <p>Практические домашнее задание и тесты по пройденному материалу (выполняются по желанию)</p>
+                <div class="timeline-item fade-in-up delay-300">
+                    <div class="timeline-dot">4</div>
+                    <div class="timeline-content">
+                        <p>Практические домашнее задание и тесты по пройденному материалу (выполняются по желанию)</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Block 12: Reviews -->
-    <section class="section bg-image-5" style="position: relative;">
+    <!-- Block 12: Cases (formerly Reviews) -->
+    <section class="section bg-image-5 section-dark-overlay" style="position: relative;" id="cases">
         <div class="overlay"></div>
         <div class="container" style="position: relative; z-index: 1;">
-            <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Отзывы</h2>
-            <div class="founder-img-placeholder"
-                style="height: 200px; max-width: 800px; background-color: rgba(255,255,255,0.9);">
-                ОТЗЫВЫ ТУРИСТОВ И УЧЕНИКОВ
+            <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Кейсы моих учеников
+            </h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Реальные истории трансформации</p>
+
+            <div class="grid-2" style="margin-bottom: 3rem;">
+                <!-- Case 1 -->
+                <div class="case-card fade-in-up">
+                    <span class="case-label">Ученик 1</span>
+                    <div class="case-journey">
+                        <div class="case-point case-point-a">
+                            <h5>Точка А</h5>
+                            <p>Мама в декрете, доход 0</p>
+                        </div>
+                        <span class="case-arrow">→</span>
+                        <div class="case-point case-point-b">
+                            <h5>Точка Б</h5>
+                            <p>Заработала 120 000 руб. в первый месяц, отправив 4 семьи в Турцию</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="case-card fade-in-up delay-100">
+                    <span class="case-label">Ученик 2</span>
+                    <div class="case-journey">
+                        <div class="case-point case-point-a">
+                            <h5>Точка А</h5>
+                            <p>Выгоревший офисный сотрудник</p>
+                        </div>
+                        <span class="case-arrow">→</span>
+                        <div class="case-point case-point-b">
+                            <h5>Точка Б</h5>
+                            <p>Открыл свое ИП, оборот агентства 3 млн руб/мес, работает с Бали</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Original reviews placeholder -->
+            <div
+                style="background: rgba(255,255,255,0.9); border-radius: var(--radius-xl); padding: 2rem; max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--text-dark); font-weight: 600;">ОТЗЫВЫ ТУРИСТОВ И УЧЕНИКОВ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Partnership Section -->
+    <section class="section partnership-section" id="partnership">
+        <div class="partnership-content">
+            <h2 class="section-title" style="color: white; text-shadow: none;">Лучших забираю в семью VIK TOURS</h2>
+            <p>Я не просто обучаю, я ищу таланты. Выпускники, сдавшие итоговое тестирование на отлично, получают
+                возможность заключить субагентский договор с VIK TOURS на специальных условиях (повышенная комиссия с
+                первого дня) или получить оффер на позицию менеджера в мою команду. Моя репутация и договоры с
+                туроператорами будут работать на вас!</p>
+
+            <div class="partnership-highlights">
+                <div class="partnership-highlight fade-in-up">
+                    <span class="highlight-icon">📄</span>
+                    <p>Субагентский договор на спецусловиях</p>
+                </div>
+                <div class="partnership-highlight fade-in-up delay-100">
+                    <span class="highlight-icon">💎</span>
+                    <p>Повышенная комиссия с первого дня</p>
+                </div>
+                <div class="partnership-highlight fade-in-up delay-200">
+                    <span class="highlight-icon">🤝</span>
+                    <p>Оффер в команду VIK TOURS</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <a href="#pricing" class="btn btn-green">Хочу в команду</a>
             </div>
         </div>
     </section>
 
     <!-- Block 13: FAQ -->
-    <section class="section">
+    <section class="section" id="faq">
         <div class="container">
             <h2 class="section-title">Частые вопросы</h2>
             <div style="max-width: 800px; margin: 0 auto;">
@@ -405,6 +650,31 @@
                         турагента, обучим продажам с нуля и другим аспектам работы менеджера по туризму.
                     </div>
                 </div>
+
+                <!-- NEW FAQ Item -->
+                <div class="accordion-item fade-in-up">
+                    <button class="accordion-header">А не поздно ли заходить в туризм? Сейчас же санкции, закрытые
+                        границы и дорогие перелеты? <span>+</span></button>
+                    <div class="accordion-content">
+                        Именно сейчас — золотое время. Самостоятельное бронирование усложнилось (не работают российские
+                        карты за рубежом, нет прямых рейсов на многих направлениях). Люди боятся летать сами и массово
+                        возвращаются к турагентам за безопасностью и экспертностью. Чеки выросли, а значит, выросла и
+                        ваша комиссия с каждого тура.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Lead Magnet Bottom Section -->
+    <section class="section" style="background-color: var(--white);">
+        <div class="container">
+            <div class="lead-magnet-bottom fade-in-up">
+                <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">📋</span>
+                <h3>Еще сомневаетесь, подойдет ли вам профессия онлайн-турагента?</h3>
+                <p>Скачайте мой бесплатный авторский чек-лист <strong>«5 фатальных ошибок новичка в туризме, которые
+                        лишают денег»</strong> и пройдите короткий тест на предрасположенность к профессии.</p>
+                <button class="btn btn-green btn-pulse" onclick="alert('Скачать чек-лист')">Скачать бесплатно</button>
             </div>
         </div>
     </section>
@@ -412,26 +682,109 @@
     <!-- Block 14: Footer -->
     <footer>
         <div class="container">
-            <h3>VIK TOURS</h3>
+            <h3 style="margin-bottom: 0.5rem;">VIK TOURS</h3>
+            <p style="margin-bottom: 1rem;">Академия онлайн-турагентов</p>
+            <div class="footer-links">
+                <a href="#about">О курсе</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="#cases">Кейсы</a>
+                <a href="#faq">FAQ</a>
+            </div>
             <p>Реквизиты и юридические документы</p>
             <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2025 VIK TOURS. Все права защищены.</p>
         </div>
     </footer>
 
+    <!-- Lead Magnet Popup -->
+    <div class="lead-magnet-overlay" id="leadMagnet">
+        <div class="lead-magnet-popup">
+            <button class="lead-magnet-close" id="leadMagnetClose">&times;</button>
+            <span class="lead-magnet-icon">🎯</span>
+            <h3>Подождите! У нас есть подарок</h3>
+            <p>Скачайте бесплатный чек-лист <strong>«5 фатальных ошибок новичка в туризме, которые лишают
+                    денег»</strong> и пройдите тест на предрасположенность к профессии.</p>
+            <button class="btn btn-green"
+                onclick="alert('Скачать чек-лист'); document.getElementById('leadMagnet').classList.remove('active');">Скачать
+                бесплатно</button>
+        </div>
+    </div>
+
     <script>
-        // Accordion functionality
-        const accordions = document.querySelectorAll('.accordion-header');
-        accordions.forEach(acc => {
-            acc.addEventListener('click', function () {
-                this.parentElement.classList.toggle('active');
-                const span = this.querySelector('span');
-                span.textContent = this.parentElement.classList.contains('active') ? '-' : '+';
+        // ====== SCROLL PROGRESS BAR ======
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        });
+
+        // ====== NAVBAR SCROLL EFFECT ======
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ====== MOBILE BURGER ======
+        const burger = document.getElementById('navBurger');
+        const navLinks = document.getElementById('navLinks');
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navLinks.classList.remove('active');
             });
         });
 
-        // Scroll Animation
+        // ====== PARTICLES ======
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.width = (Math.random() * 6 + 3) + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.animationDuration = (Math.random() * 10 + 8) + 's';
+            particle.style.animationDelay = (Math.random() * 10) + 's';
+            particle.style.background = Math.random() > 0.5
+                ? 'rgba(140, 198, 63, 0.3)'
+                : 'rgba(249, 74, 131, 0.2)';
+            particlesContainer.appendChild(particle);
+        }
+
+        // ====== ACCORDION ======
+        const accordions = document.querySelectorAll('.accordion-header');
+        accordions.forEach(acc => {
+            acc.addEventListener('click', function () {
+                const item = this.parentElement;
+                const wasActive = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.accordion-item').forEach(el => {
+                    el.classList.remove('active');
+                    el.querySelector('span').textContent = '+';
+                });
+
+                // Open clicked if wasn't active
+                if (!wasActive) {
+                    item.classList.add('active');
+                    this.querySelector('span').textContent = '+';
+                }
+            });
+        });
+
+        // ====== SCROLL ANIMATIONS ======
         const observerOptions = {
-            threshold: 0.1
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -443,9 +796,115 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in-up').forEach(el => {
+        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
             el.style.animationPlayState = 'paused';
             observer.observe(el);
+        });
+
+        // ====== ANIMATED COUNTERS ======
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.count);
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(easeOut * target);
+
+                if (target >= 1000) {
+                    el.textContent = current.toLocaleString('ru-RU');
+                } else {
+                    el.textContent = current;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    if (target >= 1000) {
+                        el.textContent = target.toLocaleString('ru-RU') + '+';
+                    } else {
+                        el.textContent = target + '+';
+                    }
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number, .counter-number').forEach(el => {
+            counterObserver.observe(el);
+        });
+
+        // ====== LEAD MAGNET POPUP ======
+        let popupShown = false;
+        function showPopup() {
+            if (!popupShown) {
+                popupShown = true;
+                document.getElementById('leadMagnet').classList.add('active');
+            }
+        }
+
+        // Show on exit intent (mouse leaves viewport)
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY < 10 && !popupShown) {
+                showPopup();
+            }
+        });
+
+        // Show after 45 seconds
+        setTimeout(() => {
+            if (!popupShown) showPopup();
+        }, 45000);
+
+        document.getElementById('leadMagnetClose').addEventListener('click', () => {
+            document.getElementById('leadMagnet').classList.remove('active');
+        });
+
+        document.getElementById('leadMagnet').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                e.currentTarget.classList.remove('active');
+            }
+        });
+
+        // ====== SMOOTH SCROLL FOR ANCHORS ======
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ====== TILT ON HOVER FOR CARDS (SUBTLE) ======
+        document.querySelectorAll('.card:not(.pricing-card)').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 30;
+                const rotateY = (centerX - x) / 30;
+                card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
         });
     </script>
 </body>
