@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-
         /* ===== Pricing h3 highlight ===== */
         .pricing-header h3 {
             font-size: 1.35rem;
@@ -24,6 +23,7 @@
             display: inline-block;
             padding-bottom: 0.4rem;
         }
+
         .pricing-header h3::after {
             content: '';
             display: block;
@@ -45,31 +45,35 @@
 
         /* ===== FOR-YOU CARDS ===== */
         .for-you-card {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 16px;
             padding: 1.6rem 1.75rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-top: 4px solid var(--primary-red);
             display: flex;
             flex-direction: column;
             gap: 0.45rem;
         }
+
         .for-you-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
         }
+
         .for-you-title {
             font-size: 1.05rem;
             font-weight: 700;
             color: var(--primary-dark-blue);
             line-height: 1.3;
         }
+
         .for-you-text {
             font-size: 0.9rem;
             color: #5a6a80;
             line-height: 1.6;
         }
+
         .modal-overlay {
             display: none;
             position: fixed;
@@ -81,24 +85,38 @@
             justify-content: center;
             padding: 1rem;
         }
-        .modal-overlay.open { display: flex; }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
         .modal-box {
             background: #fff;
             border-radius: 20px;
             padding: 2.25rem 2rem;
             max-width: 520px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
             position: relative;
             animation: modalIn 0.3s ease;
         }
+
         @keyframes modalIn {
-            from { opacity: 0; transform: scale(0.94) translateY(16px); }
-            to   { opacity: 1; transform: scale(1) translateY(0); }
+            from {
+                opacity: 0;
+                transform: scale(0.94) translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
         }
+
         .modal-close {
             position: absolute;
-            top: 1rem; right: 1.25rem;
+            top: 1rem;
+            right: 1.25rem;
             background: none;
             border: none;
             font-size: 1.6rem;
@@ -107,10 +125,30 @@
             color: #888;
             transition: color 0.2s;
         }
-        .modal-close:hover { color: #333; }
-        .modal-box h3 { font-size: 1.25rem; font-weight: 700; color: #0f3460; margin-bottom: 1.25rem; }
-        .modal-form .form-group { margin-bottom: 1rem; }
-        .modal-form label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; color: #444; }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .modal-box h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f3460;
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-form .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .modal-form label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #444;
+        }
+
         .modal-form input[type="text"],
         .modal-form input[type="tel"],
         .modal-form input[type="email"] {
@@ -123,10 +161,19 @@
             outline: none;
             transition: border-color 0.2s;
         }
-        .modal-form input:focus { border-color: #0f3460; }
+
+        .modal-form input:focus {
+            border-color: #0f3460;
+        }
 
         /* ===== CHECKBOXES ===== */
-        .consent-block { margin-top: 1.1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+        .consent-block {
+            margin-top: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
         .consent-item {
             display: flex;
             align-items: flex-start;
@@ -135,6 +182,7 @@
             line-height: 1.5;
             color: #444;
         }
+
         .consent-item input[type="checkbox"] {
             appearance: none;
             -webkit-appearance: none;
@@ -149,22 +197,33 @@
             transition: border-color 0.2s, background 0.2s;
             margin-top: 2px;
         }
+
         .consent-item input[type="checkbox"]:checked {
             background: #0f3460;
             border-color: #0f3460;
         }
+
         .consent-item input[type="checkbox"]:checked::after {
             content: '';
             position: absolute;
-            left: 4px; top: 1px;
-            width: 6px; height: 10px;
+            left: 4px;
+            top: 1px;
+            width: 6px;
+            height: 10px;
             border: 2px solid #fff;
             border-top: none;
             border-left: none;
             transform: rotate(45deg);
         }
-        .consent-item a { color: #0f3460; text-decoration: underline; }
-        .consent-item a:hover { color: #e63946; }
+
+        .consent-item a {
+            color: #0f3460;
+            text-decoration: underline;
+        }
+
+        .consent-item a:hover {
+            color: #e63946;
+        }
 
         .modal-submit {
             width: 100%;
@@ -180,8 +239,17 @@
             cursor: pointer;
             transition: opacity 0.2s, transform 0.15s;
         }
-        .modal-submit:hover { opacity: 0.9; transform: scale(1.01); }
-        .modal-submit:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+        .modal-submit:hover {
+            opacity: 0.9;
+            transform: scale(1.01);
+        }
+
+        .modal-submit:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none;
+        }
 
         /* ===== REVIEWS NOTICE ===== */
         .reviews-notice {
@@ -197,20 +265,34 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .reviews-notice strong { display: block; margin-bottom: 0.3rem; }
+
+        .reviews-notice strong {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
 
         /* ===== FOOTER LEGAL ===== */
         .footer-legal {
             margin-top: 1.25rem;
             padding-top: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.12);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
             font-size: 0.82rem;
             line-height: 1.7;
             opacity: 0.75;
         }
-        .footer-legal a { color: #a8c5ff; text-decoration: underline; }
-        .footer-legal a:hover { color: #fff; }
-        .footer-requisites { margin-bottom: 0.6rem; }
+
+        .footer-legal a {
+            color: #a8c5ff;
+            text-decoration: underline;
+        }
+
+        .footer-legal a:hover {
+            color: #fff;
+        }
+
+        .footer-requisites {
+            margin-bottom: 0.6rem;
+        }
     </style>
 </head>
 
@@ -223,7 +305,7 @@
         <!-- Gradient overlay -->
         <div class="hero-overlay"></div>
 
-        
+
 
         <!-- Animated particles -->
         <div class="hero-particles" aria-hidden="true">
@@ -253,15 +335,17 @@
             <h1 class="hero-title">
                 Получите профессию<br>
                 <span class="hero-highlight">онлайн-турагента</span><br>
-               
+
             </h1>
 
-            <p class="hero-sub">Зарабатывайте от 70 000 до нескольких миллионов рублей<br>из любой точки мира — прямо с ноутбука или телефона</p>
+            <p class="hero-sub">Зарабатывайте от 70 000 до нескольких миллионов рублей<br>из любой точки мира — прямо с
+                ноутбука или телефона</p>
 
             <!-- Stats row -->
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-numrow"><span class="hstat-num" data-target="5000">0</span><span class="hstat-suffix">+</span></div>
+                    <div class="hero-stat-numrow"><span class="hstat-num" data-target="5000">0</span><span
+                            class="hstat-suffix">+</span></div>
                     <span class="hstat-label">туристов</span>
                 </div>
 
@@ -292,7 +376,8 @@
     <!-- Block 2: About Course & Founder -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Обучение с нуля от основателя и директора онлайн-турагентства Викории Новиковой</h2>
+            <h2 class="section-title">Обучение с нуля от основателя и директора онлайн-турагентства Виктории Новиковой
+            </h2>
             <p class="section-subtitle">Уникальный курс, который содержит в себе актуальную и объемную информацию в
                 сфере туризма, после получения которой, Вы сможете стать настоящими профессионалами и увеличить свой
                 доход занимаясь любимым делом.</p>
@@ -307,7 +392,8 @@
                     <ul style="list-style: none; margin-top: 1rem;">
                         <li style="margin-bottom: 1rem;">✅ Эксперт в области туризма с опытом работы более 15 лет</li>
                         <li style="margin-bottom: 1rem;">✅ Предприниматель в сфере туризма с миллионными оборотами</li>
-                        <li style="margin-bottom: 1rem;">✅ С агентством VIK TOURS отдохнуло уже более 5 000 туристов
+                        <li style="margin-bottom: 1rem;">✅ С агентством Виктории Новиковой отдохнуло уже более 5 000
+                            туристов
                         </li>
                     </ul>
                 </div>
@@ -381,14 +467,19 @@
             <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Именно Вам подходит
                 этот курс, если:</h2>
             <div class="grid-3">
-                <div class="card fade-in-up">Вы обожаете путешествовать<br>и хотели бы превратить это в стабильный заработок</div>
-                <div class="card fade-in-up delay-100">Вы выгорели на старой работе<br>и хотели бы сменить деятельность</div>
-                <div class="card fade-in-up delay-200">У вас амбициозные цели<br>и Вы хотите открыть свое турагентство<br>и зарабатывать от 500 000 руб. в месяц и больше</div>
-                <div class="card fade-in-up">Хотите иметь дополнительный доход от 70 000 руб.<br>используя только интернет и ноутбук</div>
+                <div class="card fade-in-up">Вы обожаете путешествовать<br>и хотели бы превратить это в стабильный
+                    заработок</div>
+                <div class="card fade-in-up delay-100">Вы выгорели на старой работе<br>и хотели бы сменить деятельность
+                </div>
+                <div class="card fade-in-up delay-200">У вас амбициозные цели<br>и Вы хотите открыть свое
+                    турагентство<br>и зарабатывать от 500 000 руб. в месяц и больше</div>
+                <div class="card fade-in-up">Хотите иметь дополнительный доход от 70 000 руб.<br>используя только
+                    интернет и ноутбук</div>
                 <div class="card fade-in-up delay-100">Часто путешествуете<br>и хотели бы делать это со скидками</div>
                 <div class="card fade-in-up delay-200">Не знаете с чего начать<br>туристический бизнес</div>
                 <div class="card fade-in-up">Хотите работать удалённо<br>из любой точки мира</div>
-                <div class="card fade-in-up delay-100">Хотите узнать нюансы работы турагентом,<br>посмотреть работу изнутри,<br>получить практику</div>
+                <div class="card fade-in-up delay-100">Хотите узнать нюансы работы турагентом,<br>посмотреть работу
+                    изнутри,<br>получить практику</div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
                 <button class="btn btn-primary" onclick="openModal('Оставить заявку')">Оставить заявку</button>
@@ -405,15 +496,18 @@
             <div class="grid-2">
                 <div class="card fade-in-up">
                     <h4>Без воды</h4>
-                    <p>Актуальная и честная информация без воды.<br>Я не обещаю миллионных заработков в первый месяц, но дам все рабочие инструменты для достижения этих целей</p>
+                    <p>Актуальная и честная информация без воды.<br>Я не обещаю миллионных заработков в первый месяц, но
+                        дам все рабочие инструменты для достижения этих целей</p>
                 </div>
                 <div class="card fade-in-up delay-100">
                     <h4>Много практики</h4>
-                    <p>На моём курсе много практики, а не только сухая теория.<br>После окончания курса, вы без страха сможете работать с реальными туристами</p>
+                    <p>На моём курсе много практики, а не только сухая теория.<br>После окончания курса, вы без страха
+                        сможете работать с реальными туристами</p>
                 </div>
                 <div class="card fade-in-up delay-200">
                     <h4>Карьерный рост</h4>
-                    <p>Моё агентство постоянно растёт и лучшие ученики смогут пойти ко мне в команду<br>и стать менеджерами, старшими менеджерами или руководителем продаж</p>
+                    <p>Моё агентство постоянно растёт и лучшие ученики смогут пойти ко мне в команду<br>и стать
+                        менеджерами, старшими менеджерами или руководителем продаж</p>
                 </div>
                 <div class="card fade-in-up delay-300">
                     <h4>Бонусы</h4>
@@ -441,17 +535,29 @@
                             туроператорами мы берем на себя</p>
                     </div>
                     <ul class="pricing-features">
-                        <li><strong>Блок 1:</strong><br>Понятие, что такое туризм.<br>Пакетный или самостоятельный тур.<br>Различия между турагентом и туроператором.<br>Что сейчас происходит в туризме.<br>Тревел-терминология.</li>
-                        <li><strong>Блок 2:</strong><br>Инструменты для поиска тура, сайты туроператоров.<br>Регулярные и чартерные рейсы, трансферы.<br>Визы, страховки, перелет с инфантом.<br>Сроки действия загранпаспортов.</li>
-                        <li><strong>Блок 3:</strong><br>Понятие сезонности в пляжном отдыхе.<br>Основные курорты Турции, ОАЭ, Египта.<br>Отельная база.<br>Летний и зимний отдых.<br>Морские и речные круизы.</li>
-                        <li><strong>Блок 4:</strong><br>Погружение в Азию (Таиланд, Вьетнам, Индия, Китай, Индонезия).<br>Как правильно продавать Мальдивы и Сейшелы.<br>Как сейчас попасть в Европу.</li>
-                        <li><strong>Блок 5:</strong><br>Практическая часть.<br>Учимся делать подборки для туристов.<br>Этапы подбора тура, работа в программах по подбору.<br>Подтверждение тура и выдача документов.<br>Аннуляция тура, страховка от невылета.</li>
-                        <li style="margin-top: 1rem; font-style: italic;">В результате Вы уже сможете подбирать и бронировать туры для себя и близких,<br>с вознаграждением от туроператора, зарабатывая на комиссии.</li>
+                        <li><strong>Блок 1:</strong><br>Понятие, что такое туризм.<br>Пакетный или самостоятельный
+                            тур.<br>Различия между турагентом и туроператором.<br>Что сейчас происходит в
+                            туризме.<br>Тревел-терминология.</li>
+                        <li><strong>Блок 2:</strong><br>Инструменты для поиска тура, сайты туроператоров.<br>Регулярные
+                            и чартерные рейсы, трансферы.<br>Визы, страховки, перелет с инфантом.<br>Сроки действия
+                            загранпаспортов.</li>
+                        <li><strong>Блок 3:</strong><br>Понятие сезонности в пляжном отдыхе.<br>Основные курорты Турции,
+                            ОАЭ, Египта.<br>Отельная база.<br>Летний и зимний отдых.<br>Морские и речные круизы.</li>
+                        <li><strong>Блок 4:</strong><br>Погружение в Азию (Таиланд, Вьетнам, Индия, Китай,
+                            Индонезия).<br>Как правильно продавать Мальдивы и Сейшелы.<br>Как сейчас попасть в Европу.
+                        </li>
+                        <li><strong>Блок 5:</strong><br>Практическая часть.<br>Учимся делать подборки для
+                            туристов.<br>Этапы подбора тура, работа в программах по подбору.<br>Подтверждение тура и
+                            выдача документов.<br>Аннуляция тура, страховка от невылета.</li>
+                        <li style="margin-top: 1rem; font-style: italic;">В результате Вы уже сможете подбирать и
+                            бронировать туры для себя и близких,<br>с вознаграждением от туроператора, зарабатывая на
+                            комиссии.</li>
                     </ul>
                     <div style="text-align: center; margin-top: auto; margin-bottom: 1rem;">
                         <p class="old-price">55 000 ₽</p>
                         <p class="price" style="font-size: 1.8rem;">39 000 ₽
-                            <span class="price-note-red">(эксклюзивные условия на старте продаж для тех кто в списке предзаписи)</span>
+                            <span class="price-note-red">(эксклюзивные условия на старте продаж для тех кто в списке
+                                предзаписи)</span>
                         </p>
                     </div>
                     <button class="btn btn-primary" onclick="openModal('Тариф 1 — Для себя')">Хочу этот тариф</button>
@@ -480,7 +586,8 @@
                         <p class="old-price">75 000 ₽</p>
                         <p class="price">49 000 ₽</p>
                     </div>
-                    <button class="btn btn-primary" onclick="openModal('Тариф 2 — Профессиональный')">Хочу этот тариф</button>
+                    <button class="btn btn-primary" onclick="openModal('Тариф 2 — Профессиональный')">Хочу этот
+                        тариф</button>
                 </div>
 
                 <!-- Tariff 3 -->
@@ -500,7 +607,8 @@
                             <span class="price-note-red">(только эксклюзивные условия для Вас)</span>
                         </p>
                     </div>
-                    <button class="btn btn-primary" onclick="openModal('Тариф 3 — Индивидуальный')">Хочу этот тариф</button>
+                    <button class="btn btn-primary" onclick="openModal('Тариф 3 — Индивидуальный')">Хочу этот
+                        тариф</button>
                 </div>
             </div>
     </section>
@@ -522,12 +630,14 @@
                 <h3>🎁 ПОДАРОЧНЫЕ ТЕМЫ ВСЕМ УЧАСТНИКАМ, СДЕЛАВШИМ ПРЕДОПЛАТУ:</h3>
                 <p>Как продавать, если не был в этой стране</p>
                 <p>Где брать контент для соц.сетей, как правильно отправлять предложения туристам</p>
-                <p>Всё о рекламных турах, онлайн-рекламниках, бонусах для агентов, семинарах, бизнес-завтраках, презентациях — что это такое и как туда попасть</p>
+                <p>Всё о рекламных турах, онлайн-рекламниках, бонусах для агентов, семинарах, бизнес-завтраках,
+                    презентациях — что это такое и как туда попасть</p>
                 <p>Как продавать на большие чеки и не бояться — бонусный эфир по психологии продаж</p>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
                 <button class="btn btn-primary" onclick="openPrepayModal()">Оставить предоплату — 3 000 рублей</button>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.75);">НА СТАРТЕ ПРОДАЖ ВЫ СМОЖЕТЕ ДОПЛАТИТЬ ЛЮБОЙ ТАРИФ И ГАРАНТИРОВАННО ЗАНЯТЬ МЕСТО ПО САМОЙ ВЫГОДНОЙ ЦЕНЕ</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.75);">НА СТАРТЕ ПРОДАЖ ВЫ
+                    СМОЖЕТЕ ДОПЛАТИТЬ ЛЮБОЙ ТАРИФ И ГАРАНТИРОВАННО ЗАНЯТЬ МЕСТО ПО САМОЙ ВЫГОДНОЙ ЦЕНЕ</p>
             </div>
         </div>
     </section>
@@ -556,51 +666,36 @@
     <section class="section how-works-section" style="position: relative;">
         <div class="how-works-overlay"></div>
         <div class="container" style="position: relative; z-index: 1;">
-            <h2 class="section-title" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">КАК ПРОХОДИТ ОБУЧЕНИЕ</h2>
+            <h2 class="section-title" style="color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">КАК ПРОХОДИТ
+                ОБУЧЕНИЕ</h2>
             <div class="grid-2">
                 <div class="how-card fade-in-up">
                     <div class="how-num">01</div>
                     <p>Доступ к видеоурокам
-                    в удобном мобильном приложении
-                    на базе Telegram</p>
+                        в удобном мобильном приложении
+                        на базе Telegram</p>
                 </div>
                 <div class="how-card fade-in-up delay-100">
                     <div class="how-num">02</div>
                     <p>Общая встреча онлайн с Викторией
-                    с ответами на вопросы</p>
+                        с ответами на вопросы</p>
                 </div>
                 <div class="how-card fade-in-up delay-200">
                     <div class="how-num">03</div>
                     <p>Общий чат с сокурсниками
-                    и Викторией</p>
+                        и Викторией</p>
                 </div>
                 <div class="how-card fade-in-up delay-300">
                     <div class="how-num">04</div>
                     <p>Практические домашние задания
-                    и тесты по пройденному материалу
-                    (выполняются по желанию)</p>
+                        и тесты по пройденному материалу
+                        (выполняются по желанию)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Block 12: Reviews -->
-    <section class="section bg-image-5" style="position: relative;">
-        <div class="overlay"></div>
-        <div class="container" style="position: relative; z-index: 1;">
-            <h2 class="section-title" style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Отзывы</h2>
-            <div class="founder-img-placeholder"
-                style="height: 200px; max-width: 800px; background-color: rgba(255,255,255,0.9);">
-                ОТЗЫВЫ ТУРИСТОВ И УЧЕНИКОВ
-            </div>
-            <!-- Уведомление об условиях обработки ПД в разделе отзывов -->
-            <div class="reviews-notice">
-                <strong>Информация об условиях обработки и о наличии запретов и условий на обработку неограниченным кругом лиц персональных данных, разрешённых субъектом персональных данных для распространения:</strong>
-                Персональные данные (имя, фамилия человека), размещённые на сайте, опубликованы с согласия субъектов на распространение.
-                Обработка ПД в любой форме третьими лицами (кроме доступа на сайте в соответствии с согласием): запрещена.
-            </div>
-        </div>
-    </section>
+
 
     <!-- Block 13: FAQ -->
     <section class="section">
@@ -690,11 +785,16 @@
                 <div class="consent-block">
                     <label class="consent-item">
                         <input type="checkbox" id="consentProcessing" required>
-                        <span>Я согласен (<a href="consent-processing.html" target="_blank">текст согласия</a>) с обработкой моих персональных данных в соответствии с политикой (<a href="privacy-policy.html" target="_blank">текст политики</a>) обработки персональных данных</span>
+                        <span>Я согласен (<a href="consent-processing.html" target="_blank">текст согласия</a>) с
+                            обработкой моих персональных данных в соответствии с политикой (<a
+                                href="privacy-policy.html" target="_blank">текст политики</a>) обработки персональных
+                            данных</span>
                     </label>
                     <label class="consent-item">
                         <input type="checkbox" id="consentMailing">
-                        <span>Даю согласие (<a href="consent-mailing.html" target="_blank">текст согласия</a>) на получение информационных и маркетинговых материалов (вы в любой момент можете отказаться от получения писем путём направления отказа на эл. почту компании)</span>
+                        <span>Даю согласие (<a href="consent-mailing.html" target="_blank">текст согласия</a>) на
+                            получение информационных и маркетинговых материалов (вы в любой момент можете отказаться от
+                            получения писем путём направления отказа на эл. почту компании)</span>
                     </label>
                 </div>
                 <button type="submit" class="modal-submit" id="modalSubmitBtn">Отправить заявку</button>
@@ -704,23 +804,32 @@
     </div>
 
     <!-- Modal Overlay — Предоплата -->
-    <div class="modal-overlay" id="prepayModalOverlay" role="dialog" aria-modal="true" aria-labelledby="prepayModalTitle">
+    <div class="modal-overlay" id="prepayModalOverlay" role="dialog" aria-modal="true"
+        aria-labelledby="prepayModalTitle">
         <div class="modal-box">
             <button class="modal-close" onclick="closePrepayModal()" aria-label="Закрыть">&times;</button>
             <h3 id="prepayModalTitle">Предоплата — 3 000 рублей</h3>
-            <p style="font-size:0.88rem; color:#555; margin-bottom:1rem; line-height:1.5;">Перед переходом к оплате, пожалуйста, подтвердите своё согласие.</p>
+            <p style="font-size:0.88rem; color:#555; margin-bottom:1rem; line-height:1.5;">Перед переходом к оплате,
+                пожалуйста, подтвердите своё согласие.</p>
             <div class="consent-block">
                 <label class="consent-item">
                     <input type="checkbox" id="prepayConsentProcessing">
-                    <span>Я согласен (<a href="consent-processing.html" target="_blank">текст согласия</a>) с обработкой моих персональных данных в соответствии с политикой (<a href="privacy-policy.html" target="_blank">текст политики</a>) обработки персональных данных</span>
+                    <span>Я согласен (<a href="consent-processing.html" target="_blank">текст согласия</a>) с обработкой
+                        моих персональных данных в соответствии с политикой (<a href="privacy-policy.html"
+                            target="_blank">текст политики</a>) обработки персональных данных</span>
                 </label>
                 <label class="consent-item">
                     <input type="checkbox" id="prepayConsentMailing">
-                    <span>Даю согласие (<a href="consent-mailing.html" target="_blank">текст согласия</a>) на получение информационных и маркетинговых материалов (вы в любой момент можете отказаться от получения писем путём направления отказа на эл. почту компании)</span>
+                    <span>Даю согласие (<a href="consent-mailing.html" target="_blank">текст согласия</a>) на получение
+                        информационных и маркетинговых материалов (вы в любой момент можете отказаться от получения
+                        писем путём направления отказа на эл. почту компании)</span>
                 </label>
             </div>
-            <button class="modal-submit" id="prepaySubmitBtn" onclick="proceedToPrepay()" style="margin-top:1.25rem;">Перейти к оплате</button>
-            <div id="prepayMsg" style="margin-top:0.75rem; text-align:center; font-size:0.88rem; color:#c0392b; display:none;">Необходимо подтвердить согласие на обработку персональных данных.</div>
+            <button class="modal-submit" id="prepaySubmitBtn" onclick="proceedToPrepay()"
+                style="margin-top:1.25rem;">Перейти к оплате</button>
+            <div id="prepayMsg"
+                style="margin-top:0.75rem; text-align:center; font-size:0.88rem; color:#c0392b; display:none;">
+                Необходимо подтвердить согласие на обработку персональных данных.</div>
         </div>
     </div>
 
@@ -794,7 +903,7 @@
             document.body.style.overflow = '';
         }
 
-        overlay.addEventListener('click', function(e) {
+        overlay.addEventListener('click', function (e) {
             if (e.target === overlay) closeModal();
         });
 
@@ -814,7 +923,7 @@
             document.body.style.overflow = '';
         }
 
-        prepayOverlay.addEventListener('click', function(e) {
+        prepayOverlay.addEventListener('click', function (e) {
             if (e.target === prepayOverlay) closePrepayModal();
         });
 
@@ -829,12 +938,12 @@
         }
 
         // Close on Escape
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') { closeModal(); closePrepayModal(); }
         });
 
         // ===== FORMSPREE SUBMIT =====
-        modalForm.addEventListener('submit', async function(e) {
+        modalForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
             const name = document.getElementById('modalName').value.trim();

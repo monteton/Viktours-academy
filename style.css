@@ -438,12 +438,50 @@ h6 {
 
 /* ---- hero responsive ---- */
 @media (max-width: 768px) {
-  .hero-title { font-size: 2.4rem; }
-  .hero-sub   { font-size: 1rem; }
-  .hstat-num  { font-size: 1.6rem; }
-  .hero-stats { padding: 1rem 1.25rem; }
+  .hero-title {
+    font-size: clamp(1.65rem, 6.5vw, 2.4rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .hero-sub {
+    font-size: 0.92rem;
+    padding: 0 0.25rem;
+  }
+  .hero-inner {
+    padding: 5rem 0.9rem 3.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-ticker {
+    max-width: 100%;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 1.1rem;
+    box-sizing: border-box;
+  }
+  .ticker-track { gap: 1.25rem; font-size: 0.75rem; }
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 0.28rem 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+  .hero-stats {
+    padding: 0.8rem 0;
+    max-width: calc(100% - 1.8rem);
+    width: calc(100% - 1.8rem);
+    margin: 0 auto 2rem;
+    box-sizing: border-box;
+    gap: 0;
+  }
+  .hero-stat { flex: 1; min-width: 0; }
+  .hstat-num  { font-size: 1.35rem; }
+  .hstat-suffix { font-size: 1.1rem; }
+  .hstat-label { font-size: 0.62rem; letter-spacing: 0.04em; }
+  .hero-stat-divider { height: 32px; margin: 0 2px; flex-shrink: 0; }
+  .btn-hero { font-size: 0.95rem; padding: 0.85rem 1.75rem; }
+  .hero-cta-note { font-size: 0.78rem; padding: 0 0.5rem; text-align: center; }
   .hero-scroll { display: none; }
 }
+
 
 .hero p:not(.hero-sub):not(.hero-cta-note) {
   font-size: 1.25rem;
@@ -821,14 +859,18 @@ footer a:hover { color: #fff; }
 /* Responsive */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
   .how-num {
     font-size: 2.2rem;
+  }
+
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    overflow-x: hidden;
   }
 }
